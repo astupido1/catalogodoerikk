@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <!-- Incluindo Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body{
+            
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1a1a1a;
+        }
+
+        .card-filme {
+            background-color: red;
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            display: inline-block;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+        }
+        .card-filme1 {
+            background-color: rgb(0, 0, 0);
+            width: 280px;
+            display: inline-block;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+        }
+        .card-filme2 {
+            background-color: blue;
+            width: 280px;
+            border-radius: 10px;
+            display: inline-block;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+        }
+        .genero2{
+
+background-color: #ff0000;
+color: #f5eded;
+padding: 3px 8px;
+border-radius: 15px;
+font-weight: bold;
+font-size: 0.8em;
+}
+.botao2{
+            display: block;
+            width: 100%;
+            background: #ff0000 ;
+            color: #f3efef;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .conteudo2{
+            padding:20px ;
+            position: relative;
+        }
+        .titulo2{
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        .poster2 {
+            width: 100%;
+            height: 400px;
+            object-fit: 100% ;
+            border-bottom: 3px solid #fd0000;
+        }
+
+
+        .card-filme3 {
+            background-color: rgb(22, 104, 20);
+            width: 280px;
+            border-radius: 10px;
+            display: inline-block;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: rgb(255, 255, 255);
+            box-shadow: 0 8px 16px black;
+        }
+        .poster3 {
+            width: 100%;
+            height: 400px;
+            object-fit: 100% ;
+            border-bottom: 3px solid #fd0000;
+        }
+        .card-filme4 {
+            background-color: rgb(0, 0, 0);
+            display: inline-block;
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+        }
+        .titulo4{
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #ca0d0d;
+        }
+        .titulo13{
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #490a0a;
+        }
+        .titulo14{
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #fd7200;
+        }
+        .poster4 {
+            width: 100%;
+            height: 400px;
+            object-fit: 100% ;
+            border-bottom: 3px solid #fd0000;
+        }
+        .card-filme5 {
+            background-color: rgb(0, 0, 0);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+        .botao5{
+            display: block;
+            width: 100%;
+            background: #0d1830 ;
+            color: #f3efef;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .genero5{
+
+background-color: #0d1830 ;
+color: #f5eded;
+padding: 3px 8px;
+border-radius: 15px;
+font-weight: bold;
+font-size: 1em;
+}
+
+
+.poster5 {
+            width: 100%;
+            height: 400px;
+            object-fit: 100% ;
+            border-bottom: 3px solid #0d1830 ;
+        }
+        .card-filme6 {
+            background-color: rgb(37, 3, 46);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }  .genero6{
+
+background-color: #0d1830 ;
+color: #f5eded;
+padding: 3px 8px;
+border-radius: 15px;
+font-weight: bold;
+font-size: 1em;
+}
+  .genero15{
+
+background-color: #000000 ;
+color: #f5eded;
+padding: 3px 8px;
+border-radius: 15px;
+font-weight: bold;
+font-size: 1em;
+}
+.poster6 {
+            width: 100%;
+            height: 400px;
+            object-fit: 100% ;
+            border-bottom: 3px solid #030303;
+        }
+        
+        
+        .card-filme7 {
+            background-color: rgb(15, 22, 122);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        } .card-filme8 {
+            background-color: rgb(75, 243, 24);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+        .titulo8{
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #105a24;
+        }
+        .titulo15{
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+        .botao8{
+            display: block;
+            width: 100%;
+            background: #025e0a ;
+            color: #f3efef;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .info{
+
+display: flex;
+justify-content: space-between;
+margin-bottom: 15px;
+font-size: 0.9em;
+color: #ccc;
+}
+.genero8{
+
+background-color: #0e7a0a;
+color: #ffffff;
+padding: 3px 8px;
+border-radius: 15px;
+font-weight: bold;
+font-size: 0.8em;
+}
+        .card-filme9 {
+            background-color: rgb(252, 252, 252);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        } .card-filme10 {
+            background-color: rgb(14, 28, 94);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        } .card-filme11 {
+            background-color: rgb(0, 0, 0);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+     .card-filme12 {
+            background-color: rgb(0, 0, 0);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+        .card-filme13 {
+            background-color: #fc0093;
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+        .card-filme14 {
+            background-color: rgb(0, 0, 0);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+        .card-filme15 {
+            background-color: rgb(255, 115, 0);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+        .card-filme16 {
+            background-color: rgb(0, 0, 0);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+        .card-filme17 {
+            background-color: rgb(0, 0, 0);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+        .card-filme18 {
+            background-color: rgb(0, 0, 0);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+        .card-filme19 {
+            background-color: rgb(0, 0, 0);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+        .card-filme20 {
+            background-color: rgb(0, 0, 0);
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            transition: transform 0.3s;
+            color: white;
+            box-shadow: 0 8px 16px black;
+            display: inline-block;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .card-filme1:hover{
+            transform: translateY(-5px);
+        }
+
+        .card-filme2:hover{
+            transform: translateY(-5px);
+        }
+        .card-filme3:hover{
+            transform: translateY(-5px);
+        }
+
+        .card-filme4:hover{
+            transform: translateY(-5px);
+        }
+
+        .card-filme5:hover{
+            transform: translateY(-5px);
+        }
+
+        .card-filme6:hover{
+            transform: translateY(-5px);
+        }
+
+        .card-filme7:hover{
+            transform: translateY(-5px);
+        }
+
+        .card-filme8:hover{
+            transform: translateY(-5px);
+        }
+
+        .card-filme9:hover{
+            transform: translateY(-5px);
+        }
+
+        .card-filme10:hover{
+            transform: translateY(-5px);
+        }
+        .card-filme11:hover{
+            transform: translateY(-5px);
+        }
+        .card-filme12:hover{
+            transform: translateY(-5px);
+        }
+        .card-filme13:hover{
+            transform: translateY(-5px);
+        }
+        .card-filme14:hover{
+            transform: translateY(-5px);
+        }
+        .card-filme15:hover{
+            transform: translateY(-5px);
+        }
+        .card-filme16:hover{
+            transform: translateY(-5px);
+        }
+        .card-filme17:hover{
+            transform: translateY(-5px);
+        }
+        .card-filme18:hover{
+            transform: translateY(-5px);
+        }
+        .card-filme19:hover{
+            transform: translateY(-5px);
+        }
+        .card-filme20:hover{
+            transform: translateY(-5px);
+        }
+
+
+        .poster {
+             width: 100%;
+            height: 400px;
+            object-fit: 100% ;
+            border-bottom: 3px solid #ff9800;
+        }
+        .poster10 {
+             width: 100%;
+            height: 400px;
+            object-fit: 100% ;
+            border-bottom: 3px solid #ff6600;
+        }
+        .poster9 {
+             width: 100%;
+            height: 400px;
+            object-fit: 100% ;
+            border-bottom: 3px solid #ffffff;
+        }
+        .poster13 {
+             width: 100%;
+            height: 400px;
+            object-fit: 100% ;
+            border-bottom: 3px solid #fc0093;
+        }
+
+
+        .conteudo{
+            padding:20px ;
+            position: relative;
+        }
+
+        .titulo{
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #ff9800;
+        }
+        .titulo9{
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+        .titulo17{
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #ff00bf;
+        }
+
+
+        .info{
+
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        .genero{
+
+            background-color: #ff9800;
+            color: #2d2d2d;
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+        .genero17{
+
+background-color: #ff00bf ;
+color: #ffffff;
+padding: 3px 8px;
+border-radius: 15px;
+font-weight: bold;
+font-size: 0.8em;
+}
+
+
+
+        
+
+        .avaliacao{
+
+            color: #ff9800;
+            margin-bottom: 10px;
+        }
+
+        .descricao{
+            font-size: 0.9em;
+            line-height: 1.4;
+            color: #f5f4f4;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .descricao9{
+            font-size: 0.9em;
+            line-height: 1.4;
+            color: #000000;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .botao{
+            display: block;
+            width: 100%;
+            background: #ff9800 ;
+            color: #2d2d2d;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .botao10{
+            display: block;
+            width: 100%;
+            background: #ff7b00 ;
+            color: #fffcfc;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .botao17{
+            display: block;
+            width: 100%;
+            background: #ff00bf ;
+            color: #fffcfc;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .botao15{
+            display: block;
+            width: 100%;
+            background: #000000 ;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+         .botao:rover{
+
+            background: #e68900;
+         }
+
+         .ano-duracao{
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+         }
+         .ano-duracao9{
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            color: black;
+         }
+
+         
+
+
+         .fa-star {
+            margin-right: 3px;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+  <div class="card-filme1">
+    <img src="img/The_Wolf_of_Wall_Street.jpg" alt="poster do filme" class="poster">
+    <div class="conteudo">
+        <h2 class="titulo">Lobo de wall street</h2>
+        <div class="ano-duração">
+            <span>2013</span>
+            <span>3h</span>
+        </div>
+        <div class="info">
+            <span class="genero">comedia e drama</span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"> 8,2/10</i>
+               
+            </div>
+        </div>
+        <p class="descricao">
+            Jordan Belfort (DiCaprio) é um corretor de ações de baixo valor de Long Island que cumpre quase dois anos de prisão por se recusar a cooperar em um grande caso de fraude de valores mobiliários dos anos 1990, que envolveu corrupção generalizada em Wall Street e no setor bancário corporativo, incluindo infiltração da máfia.
+
+
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0993846/?ref_=nv_sr_srsg_4_tt_8_nm_0_in_0_q_lobo%2520de" class="botao">IMDB</a>
+    </div>
+  </div>  
+
+  <div class="card-filme2">
+    <img src="img/MV5BOWQwOWY5NTUtMjAyZi00YjQzLTkwODgtNmQwZjU1MGIzZDhjXkEyXkFqcGc@._V1_.jpg" alt="poster do filme" class="poster2" style="height: 394px;">
+    <div class="conteudo2">
+        <h2 class="titulo2">Bleach</h2>
+        <div class="ano-duração">
+            <span>2004-2023</span>
+            <span>150,4h</span>
+        </div>
+        <div class="info">
+            <span class="genero2"> comedia  dramatica, ação, aventura e fantasia</span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star">8,2/10</i>
+                
+            </div>
+        </div>
+        <p class="descricao">
+            Kurosaki Ichigo, um estudante do ensino médio que pode ver espíritos, ganha poderes de Shinigami (Deus da Morte) após ajudar a Shinigami Kuchiki Rukia, que se machuca enquanto luta contra um hollow um espírito maligno. Ele agora deve proteger o equilíbrio entre o mundo dos vivos e dos mortos.
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0434665/?ref_=nv_sr_srsg_1_tt_5_nm_2_in_0_q_ble" class="botao2">IMDB</a>
+    </div>
+  </div>
+<!--filme3-->
+  <div class="card-filme3">
+    <img src="img/MV5BNDBiMzMyMWItNDFkYy00MjBmLTk2ZDAtYmE2N2U4YzFlZDRmXkEyXkFqcGc@._V1_.jpg" alt="poster do filme" class="poster3" style="height: 394px;">
+    <div class="conteudo">
+        <h2 class="titulo2">Hunter x Hunter</h2>
+        <div class="ano-duração">
+            <span>2011-2014</span>
+            <span>59h e 12min</span>
+        </div>
+        <div class="info">
+            <span class="genero2"> comedia, sobrenatural, ação, aventura e fantasia</span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"> 9,0/10</i>
+               
+            </div>
+        </div>
+        <p class="descricao">
+            Gon Freecss é um jovem que descobre que seu pai, acreditado morto, está vivo e é um renomado "Hunter". Ele decide se tornar um Hunter profissional e participar do exame para isso, onde conhece e faz amizade com Kurapika, Leorio e Killua. Será que Gon conseguirá passar no exame e encontrar seu pai?
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt2098220/?ref_=nv_sr_srsg_1_tt_7_nm_0_in_0_q_hunter%2520x" class="botao2">IMDB</a>
+    </div>
+  </div>
+  
+  <div class="card-filme4">
+    <img src="img/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_FMjpg_UX1000_.jpg"  alt="poster do filme" class="poster4" style="height: 380px;">
+    <div class="conteudo">
+        <h2 class="titulo4">Star Wars III - A vingança dos sith</h2>
+        <div class="ano-duração">
+            <span>2005</span>
+            <span>2h e 20min</span>
+        </div>
+        <div class="info">
+            <span class="genero2">tragedia, ação e aventura </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                9.2/10
+            </div>
+        </div>
+        <p class="descricao">
+            O Conselho Jedi envia Obi-Wan Kenobi e Anakin Skywalker para resgatar o Chanceler capturado. Anakin acredita estar pronto para se tornar Jedi Mestre. Obi-Wan persegue o General Grievous. Anakin tem visões do sofrimento de Padmé e busca conselho com Yoda. Quando Darth Sidious executa a Ordem 66, quase destrói os Jedi. A história mostra o nascimento de Darth Vader, a traição entre irmãos e o poder da esperança.   
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0121766/?ref_=nv_sr_srsg_3_tt_8_nm_0_in_0_q_star%2520wars%25203" class="botao2">IMDB</a>
+    </div>
+  </div>
+
+  <div class="card-filme5">
+    <img src="img/MV5BMDFmMGZmMGItNGRjNC00NjVjLWI5ODEtNzhjMTE5MmJhN2FkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"  alt="poster do filme" class="poster5" style="height: 380px;">
+    <div class="conteudo">
+        <h2 class="titulo2">Supernatural</h2>
+        <div class="ano-duração">
+            <span>2005-2020</span>
+            <span>239,8h </span>
+        </div>
+        <div class="info">
+            <span class="genero5">drama, fantasia, horror e misterio </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,4/10
+            </div>
+        </div>
+        <p class="descricao">
+            John Winchester ensina seus filhos, Sam e Dean, a caçar seres sobrenaturais após a morte de sua esposa. Anos depois, os irmãos procuram seu pai, descobrindo que ele tem um plano para matar o demônio que matou sua mãe. Sam começa a ter visões de mortes e descobre que está envolvido em um plano apocalíptico do demônio. Após a morte de seu pai, os irmãos decidem continuar sua missão.
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0460681/?ref_=nv_sr_srsg_0_tt_6_nm_0_in_2_q_supern" class="botao5">IMDB</a>
+    </div>
+  </div>
+<!--filme6-->
+
+  <div class="card-filme6">
+    <img src="img/MV5BNWJmODlhODItZTZmYi00ZGNjLTk1NmYtMjE5M2IwYjI2MzI2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"  alt="poster do filme" class="poster6" style="height: 380px;">
+    <div class="conteudo">
+        <h2 class="titulo2">Yu Yu Hakusho</h2>
+        <div class="ano-duração">
+            <span>2005-2020</span>
+            <span>239,8h </span>
+        </div>
+        <div class="info">
+            <span class="genero6">drama, fantasia, horror e misterio </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,5/10
+            </div>
+        </div>
+        <p class="descricao">
+            Yusuke Urameshi, de 14 anos, morre ao salvar uma criança de um acidente. Surpreso com seu sacrifício, o Mundo Espiritual lhe dá uma chance de voltar à vida. Após ser ressuscitado, ele se torna um Detetive Espiritual, enfrentando diversas aventuras e torneios de luta com seus amigos.
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0185133/?ref_=nv_sr_srsg_3_tt_3_nm_5_in_0_q_yu%2520yu%2520" class="botao5">IMDB</a>
+    </div>
+  </div>
+
+  <!--filme7-->
+  <div class="card-filme7">
+    <img src="img/MV5BOGRhNDQ3NTgtMmU3YS00OWI0LTgyMmUtNGQwODk0MDg2YTYzXkEyXkFqcGc@._V1_.jpg"  alt="poster do filme" class="poster6" style="height: 400px;">
+    <div class="conteudo">
+        <h2 class="titulo2">Blue lock</h2>
+        <div class="ano-duração">
+            <span>2022-</span>
+            <span>13,93h e 56min</span>
+        </div>
+        <div class="info">
+            <span class="genero6">Esporte e animação </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,2/10
+            </div>
+        </div>
+        <p class="descricao">
+            O Japão continua perdendo a Copa do Mundo. Após ser eliminado nas eliminatórias, o atacante Isagi Yoichi é convidado para o programa "Blue Lock", onde 300 atacantes jovens são isolados e treinados para se tornarem "o maior atacante egocêntrico do mundo", sob a liderança do treinador Ego Jinpachi, que quer destruir o futebol japonês.
+
+
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt15222080/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_blue%2520lock" class="botao5">IMDB</a>
+    </div>
+  </div>
+  <!--filme8-->
+  <div class="card-filme8">
+    <img src="img/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg"  alt="poster do filme" class="poster6" style="height: 380px;">
+    <div class="conteudo">
+        <h2 class="titulo8">Rick e Morty</h2>
+        <div class="ano-duração">
+            <span>2013-</span>
+            <span>29h e 54min </span>
+        </div>
+        <div class="info">
+            <span class="genero8">comedia, aventura e animação </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                9,1/10
+            </div>
+        </div>
+        <p class="descricao">
+            Uma série animada no Adult Swim sobre as aventuras infinitas de Rick, um gênio alcoólatra e cientista descuidado, com seu neto Morty, um garoto ansioso de 14 anos que não é tão inteligente. Juntos, eles exploram universos infinitos, causando caos e se metendo em encrenca.
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt2861424/?ref_=nv_sr_srsg_0_tt_1_nm_7_in_0_q_rick" class="botao8">IMDB</a>
+    </div>
+  </div>
+  <!--filme9-->
+  <div class="card-filme9">
+    <img src="img/MV5BNTBlMzA3ZTUtODZjNi00NTM0LWExMjMtNjJhYzA3YTkwMWYwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"  alt="poster do filme" class="poster9" style="height: 380px;">
+    <div class="conteudo">
+        <h2 class="titulo9">South Park</h2>
+        <div class="ano-duracao9">
+            <span>1997</span>
+            <span>119,9h e 54min </span>
+        </div>
+        <div class="info">
+            <span class="genero8">comedia, comedia negra, satira, aventura e animação </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,7/10
+            </div>
+        </div>
+        <p class="descricao9">
+            Um grupo curioso de meninos de 10 anos, Stan, Kyle, Cartman e Kenny, se envolve em aventuras bobas que, às vezes, acabam em nada, mas outras vezes saem de controle. Tudo é estranho na cidade montanhosa de South Park, e os meninos sempre encontram algo para fazer.
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0121955/?ref_=nv_sr_srsg_1_tt_7_nm_0_in_0_q_south" class="botao8">IMDB</a>
+    </div>
+  </div>
+  <!--filme10-->
+  <div class="card-filme10">
+    <img src="img/MV5BNmFiM2FkYTYtY2FiOS00ZWJkLTkyOTgtNmFmODI4NjcwNDgzXkEyXkFqcGc@._V1_.jpg"  alt="poster do filme" class="poster10" style="height: 380px;">
+    <div class="conteudo">
+        <h2 class="titulo">Dragon Ball Z</h2>
+        <div class="ano-duração">
+            <span>1996-2003</span>
+            <span>110,8h </span>
+        </div>
+        <div class="info">
+            <span class="genero">comedia, Fantasia, Artes marciais, aventura e ação </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,8/10
+            </div>
+        </div>
+        <p class="descricao">
+            Son Goku, o lutador mais poderoso do mundo e guardião da justiça, deve proteger a Terra dos Guerreiros Saiyajins que estão a serviço do tirânico senhor da guerra espacial, Frieza. Contra todas as probabilidades, Goku deve se unir ao seu velho inimigo Piccolo para salvar todos que ele ama dessas novas e imprevisíveis ameaças à humanidade.
+
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0214341/?ref_=tt_mlt_i_12" class="botao10">IMDB</a>
+    </div>
+  </div>
+  <!--filme11-->
+  <div class="card-filme11">
+    <img src="img/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"  alt="poster do filme" class="poster6" style="height: 380px;">
+    <div class="conteudo">
+        <h2 class="titulo">Naruto</h2>
+        <div class="ano-duração">
+            <span>2002-2007</span>
+            <span>88horas </span>
+        </div>
+        <div class="info">
+            <span class="genero">comedia, Fantasia, aventura e ação  </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,4/10
+            </div>
+        </div>
+        <p class="descricao">
+            É sobre um garoto chamado Naruto Uzumaki, que tem uma raposa demoníaca selada dentro de si. Ele é rejeitado e odiado pelos outros, sendo visto como uma ameaça. Com muito esforço e perseverança, ele conquista o respeito dos outros e encontra amizade e amor em quem acreditou nele. Juntos, superam desafios e se tornam verdadeiros ninjas. A história fala sobre esperança, superação e encontrar a beleza mesmo nos momentos mais sombrios.
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0409591/?ref_=tt_mlt_i_7" class="botao10">IMDB</a>
+    </div>
+  </div>
+  <!--filme12-->
+  <div class="card-filme10">
+    <img src="img/MV5BZDlmZmQ1NTgtZWY3ZC00MDcxLTk0YWQtMjFiMDYzYzdmMjNlXkEyXkFqcGc@._V1_.jpg"  alt="poster do filme" class="poster6" style="height: 380px;">
+    <div class="conteudo">
+        <h2 class="titulo4">Homem Aranha</h2>
+        <div class="ano-duração">
+            <span>2008-2009</span>
+            <span>9,9 horas </span>
+        </div>
+        <div class="info">
+            <span class="genero2">comedia, ação, aventura e animação </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,4/10
+            </div>
+        </div>
+        <p class="descricao">
+            Peter Parker, um garoto órfão, ganha superpoderes após ser mordido por uma aranha radioativa. Ele se torna o herói mascarado, Spider-Man, e usa suas habilidades para derrotar criminosos. Em sua vida normal, como Peter, ele trabalha como fotógrafo no jornal Daily Bugle e cuida da tia May, que é semi-helpless após a morte do tio Ben. O lema de Peter é: "Com grandes poderes vêm grandes responsabilidades".
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0976192/?ref_=nv_sr_srsg_3_tt_8_nm_0_in_0_q_homem%2520aranha%2520es%2520" class="botao2">IMDB</a>
+    </div>
+  </div>
+  <!--filme13-->
+  <div class="card-filme13">
+    <img src="img/MV5BMjkxMzIwNmQtMzM5Ni00YWJiLTg4YjQtNjBiN2IxMjZhMGQ2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"  alt="poster do filme" class="poster13" style="height: 380px;">
+    <div class="conteudo">
+        <h2 class="titulo2">Hora de Aventura</h2>
+        <div class="ano-duração">
+            <span>2010-2018</span>
+            <span>110,7horas </span>
+        </div>
+        <div class="info">
+            <span class="genero2">comedia, ação, aventura e animação </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,6/10
+            </div>
+        </div>
+        <p class="descricao">
+            Adventure Time se passa na Terra pós-apocalíptica de Ooo, devastada pela "Guerra dos Cogumelos", uma guerra nuclear que destruiu a civilização mil anos antes dos eventos da série. A história segue Finn, um garoto heróico, e seu melhor amigo e irmão adotivo Jake, um cachorro amarelo que pode esticar seu corpo em qualquer forma. Juntos, enfrentam monstros e fazem amizade com personagens como a Princesa Jujuba, governante do Reino de Doces, e Marceline, a Rainha Vampira.
+
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt1305826/?ref_=fn_all_ttl_1" class="botao2">IMDB</a>
+    </div>
+  </div>
+  <!--filme14-->
+  <div class="card-filme14">
+    <img src="img/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"  alt="poster do filme" class="poster6" style="height: 380px;">
+    <div class="conteudo">
+        <h2 class="titulo14">Naruto: Shippuden</h2>
+        <div class="ano-duração">
+            <span>2007-2017</span>
+            <span>200,4 horas </span>
+        </div>
+        <div class="info">
+            <span class="genero">comedia, ação, aventura e animação </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,7/10
+            </div>
+        </div>
+        <p class="descricao">
+            Naruto Uzumaki quer ser o melhor ninja da terra. Ele tem se saído bem até agora, mas com o perigo iminente representado pela misteriosa organização Akatsuki, Naruto sabe que precisa treinar mais do que nunca e deixa sua vila para fazer exercícios intensivos que o levarão ao limite.
+
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0988824/?ref_=tt_mlt_i_1" class="botao10">IMDB</a>
+    </div>
+  </div>
+  <!--filme15-->
+  <div class="card-filme15">
+    <img src="img/MV5BYTgyMzA5MjEtNDY3Ny00ZDkyLWJhYzEtYzI2Nzk5Mzc3ZDk1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"  alt="poster do filme" class="poster6" style="height: 380px;">
+    <div class="conteudo">
+        <h2 class="titulo15">Dragon Ball Super</h2>
+        <div class="ano-duração">
+            <span>2015-2018</span>
+            <span>52,4horas </span>
+        </div>
+        <div class="info">
+            <span class="genero15">comedia, ação, aventura e animação </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,3/10
+            </div>
+        </div>
+        <p class="descricao">
+            Após a derrota de Majin Buu, a paz retorna à Terra, onde Goku e seus amigos vivem tranquilamente. No entanto, surge uma nova ameaça: Beerus, o Deus da Destruição, que busca lutar contra o lendário Super Saiyan God, previsto em uma profecia. A série retrata os eventos dos filmes Battle of Gods e Resurrection 'F', antes de seguir com uma história original sobre a exploração de universos alternativos.
+
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt4644488/" class="botao15">IMDB</a>
+    </div>
+  </div>
+  <!--filme16-->
+  <div class="card-filme16">
+    <img src="img/MV5BODE2NzNhMDctYjUzMC00Y2M5LWI2Y2EtODJkZTFjN2Y5ODlmXkEyXkFqcGc@._V1_.jpg"  alt="poster do filme" class="poster6" style="height: 400px;">
+    <div class="conteudo">
+        <h2 class="titulo4">Homem Aranha 3</h2>
+        <div class="ano-duração">
+            <span>2007</span>
+            <span>2horas e 19min</span>
+        </div>
+        <div class="info">
+            <span class="genero2">ação, aventura </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                6,3/10
+            </div>
+        </div>
+        <p class="descricao">
+            Peter Parker tenta equilibrar sua vida pessoal e como Homem-Aranha, mas enfrenta novos desafios: Harry Osborn como o Novo Duende e a busca pelo assassino de Tio Ben, Flint Marko, agora o Sandman. Seu traje negro amplifica seus poderes e suas sombras internas, e Peter precisa lutar para recuperar sua essência heroica e enfrentar seus inimigos e a escuridão dentro de si.
+
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0413300/?ref_=nv_sr_srsg_1_tt_7_nm_0_in_0_q_homem%2520aranha%25203" class="botao2">IMDB</a>
+    </div>
+  </div>
+  <!--filme17-->
+  <div class="card-filme17">
+    <img src="img/MV5BY2Y0NGE5YjgtNzFlZS00NzJjLThlMDQtZDZhNjQxNTc2NmUwXkEyXkFqcGc@._V1_.jpg"  alt="poster do filme" class="poster6" style="height: 370px;">
+    <div class="conteudo">
+        <h2 class="titulo17">Boruto:Naruto next generations</h2>
+        <div class="ano-duração">
+            <span>2017-2023</span>
+            <span>112h e 31min </span>
+        </div>
+        <div class="info">
+            <span class="genero17">comedia,  ação, drama, aventura e animação </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                6,4/10
+            </div>
+        </div>
+        <p class="descricao">
+            Naruto, um jovem shinobi travesso, realizou seu sonho de se tornar o maior ninja da vila, com seu rosto no Monumento Hokage. Mas essa não é sua história. Uma nova geração de ninjas, liderada pelo filho de Naruto, Boruto, está pronta para brilhar.
+
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt6342474/?ref_=nv_sr_srsg_0_tt_4_nm_4_in_0_q_borut" class="botao17">IMDB</a>
+    </div>
+  </div>
+  <!--filme18-->
+  <div class="card-filme18">
+    <img src="img/MV5BZWI2NzZhMTItOTM3OS00NjcyLThmN2EtZGZjMjlhYWMwODMzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"  alt="poster do filme" class="poster6" style="height: 400px;">
+    <div class="conteudo">
+        <h2 class="titulo4">Tokyo Ghoul</h2>
+        <div class="ano-duração">
+            <span>2014</span>
+            <span>4horas e 8min </span>
+        </div>
+        <div class="info">
+            <span class="genero2">ação, horror, drama e animação </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                7,7/10
+            </div>
+        </div>
+        <p class="descricao">
+            A história de suspense e horror se passa em Tóquio, assombrada por misteriosos "ghouls" que devoram humanos. As pessoas vivem com medo dessas criaturas, cujas identidades são um mistério. Kaneki, um estudante universitário comum, encontra Rize, uma garota que também ama ler, em seu café habitual. Mal sabe ele que sua vida mudará para sempre.
+
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt3741634/?ref_=nv_sr_srsg_6_tt_8_nm_0_in_0_q_toky" class="botao2">IMDB</a>
+    </div>
+  </div>
+  <!--filme19-->
+  <div class="card-filme19">
+    <img src="img/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"  alt="poster do filme" class="poster6" style="height: 425px;">
+    <div class="conteudo">
+        <h2 class="titulo1">Death Note</h2>
+        <div class="ano-duração">
+            <span>2006-2007</span>
+            <span>14horas e 8min </span>
+        </div>
+        <div class="info">
+            <span class="genero">serial killer e animação adulta </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,9/10
+            </div>
+        </div>
+        <p class="descricao">
+            Um estudante de ensino médio inteligente, mas cínico, começa a purificar o mundo do mal com a ajuda de um caderno mágico que mata qualquer pessoa cujo nome seja escrito nele. As autoridades internacionais chamam um misterioso detetive conhecido como "L" para impedir seus esforços.
+
+
+
+
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt0877057/?ref_=tt_mlt_i_5" class="botao">IMDB</a>
+    </div>
+  </div>
+  <!--filme20-->
+  <div class="card-filme20">
+    <img src="img/MV5BZmZkZjNhMWMtM2U0Mi00MjdlLTk3NmMtMTMwZjgwOTJmODMzXkEyXkFqcGc@._V1_.jpg"  alt="poster do filme" class="poster6" style="height: 400px;">
+    <div class="conteudo">
+        <h2 class="titulo">Black Clover</h2>
+        <div class="ano-duração">
+            <span>2017-2021</span>
+            <span>68 horas</span>
+        </div>
+        <div class="info">
+            <span class="genero">comedia, drama, aventura e animação </span>
+            <div class="avaliacao">
+                <i class="fa-solid fa-star"></i>
+                8,2/10
+            </div>
+        </div>
+        <p class="descricao">
+            Asta e Yuno foram abandonados juntos na mesma igreja e cresceram inseparáveis. Quando crianças, prometeram competir para ver quem se tornaria o próximo Rei Mago. No entanto, à medida que cresceram, suas habilidades se tornaram bem diferentes. Yuno era um gênio no controle e poder mágico, enquanto Asta não possuía magia alguma e treinava seu corpo fisicamente para compensar essa falta. Aos 15 anos, ambos receberam seus Grimórios, mas Yuno obteve um com o símbolo de trevo de quatro folhas, enquanto Asta não recebeu nenhum. Contudo, quando Yuno foi ameaçado, a verdadeira habilidade de Asta foi revelada: ele recebeu um Grimoire de cinco folhas, o "trevo negro". Agora, os dois amigos partem em busca do mesmo objetivo.
+        </p>
+        <a href="https://www.imdb.com/pt/title/tt7441658/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_black%2520clover" class="botao">IMDB</a>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
